@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(to right, #6a11cb, #2575fc); 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;  /* Restrict max-width for better readability */
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;  /* Softer rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Added space between form elements */
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Form Inputs */
+input[type="text"], input[type="number"], textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;  /* Smooth transition */
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    border-color: #2575fc;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 255, 0.1); /* Subtle shadow on focus */
+    outline: none;  /* Remove default outline */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient button */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Reversed gradient on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);  /* Add shadow on hover */
+}
+
+/* Success Message */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #28a745;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Reviews List */
+#reviewsList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#reviewsList li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#reviewsList li strong {
+    font-size: 16px;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    textarea {
+        font-size: 14px;
+    }
+}

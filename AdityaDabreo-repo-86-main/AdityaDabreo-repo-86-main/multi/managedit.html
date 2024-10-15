@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Events</title>
+    <link rel="stylesheet" href="manageedit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1><i class="fas fa-calendar-edit"></i> Edit Your Events</h1>
+        </header>
+        <main>
+            <div class="edit-container">
+                <h2><i class="fas fa-edit"></i> Select an Event to Edit</h2>
+
+                <!-- Event selection dropdown -->
+                <div class="select-event">
+                    <label for="event-list"><i class="fas fa-calendar-alt"></i> Select Event:</label>
+                    <select id="event-list">
+                        <!-- Events will be dynamically added here -->
+                    </select>
+                </div>
+
+                <!-- Event editing form -->
+                <form id="edit-event-form" class="hidden">
+                    <div class="card">
+                        <h3><i class="fas fa-pen"></i> Edit Event Details</h3>
+
+                        <div class="form-group">
+                            <label for="event-name"><i class="fas fa-tag"></i> Event Name:</label>
+                            <input type="text" id="event-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-date"><i class="fas fa-calendar-day"></i> Event Date:</label>
+                            <input type="date" id="event-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-description"><i class="fas fa-align-left"></i> Description:</label>
+                            <textarea id="event-description" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-location"><i class="fas fa-map-marker-alt"></i> Location:</label>
+                            <input type="text" id="event-location" required>
+                        </div>
+
+                        <button type="submit" class="save-btn"><i class="fas fa-save"></i> Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="manageedit.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Booking Page</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f7f8f9 0%, #dde1e7 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4A4A4A;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 25px;
+            border: 1px solid #dcdfe3;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus, select:focus {
+            border-color: #6c63ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        .time-select {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .time-select select {
+            width: 48%;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #6c63ff 0%, #8559da 100%);
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #574b90 0%, #6c63ff 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .time-select select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Book Your Slot</h2>
+    <form id="bookingForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" required>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Select Time:</label>
+        <div class="time-select">
+            <select id="fromTime" required>
+                <option value="">From</option>
+                <option value="08:00">08:00 AM</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+
+            <select id="toTime" required>
+                <option value="">To</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+                <option value="18:00">06:00 PM</option>
+            </select>
+        </div>
+
+        <div class="error" id="errorMessage"></div>
+
+        <button type="submit"><a href="./promotionalevents.html"> Booking</a></button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let date = document.getElementById("date").value;
+        let fromTime = document.getElementById("fromTime").value;
+        let toTime = document.getElementById("toTime").value;
+        
+        let errorMessage = document.getElementById("errorMessage");
+
+        // Clear previous error message
+        errorMessage.textContent = "";
+
+        // Validation: All fields should be filled
+        if (name === "" || email === "" || phone === "" || date === "" || fromTime === "" || toTime === "") {
+            errorMessage.textContent = "All fields are required!";
+            return;
+        }
+
+        // Convert "From" and "To" times to Date objects for comparison
+        let fromDateTime = new Date(`1970-01-01T${fromTime}:00`);
+        let toDateTime = new Date(`1970-01-01T${toTime}:00`);
+
+        // Check if the "From" time is the same as the "To" time
+        if (fromDateTime.getTime() === toDateTime.getTime()) {
+            errorMessage.textContent = "'From' and 'To' times cannot be the same!";
+            return;
+        }
+
+        // Check if "From" time is after "To" time
+        if (fromDateTime.getTime() > toDateTime.getTime()) {
+            errorMessage.textContent = "'From' time cannot be later than 'To' time!";
+            return;
+        }
+
+        // Calculate the difference in hours
+        let timeDifference = (toDateTime - fromDateTime) / (1000 * 60 * 60); // Convert milliseconds to hours
+
+        alert(`Booking Submitted Successfully!\nTime difference: ${timeDifference} hour(s)`);
+
+        // Reset the form after submission
+        document.getElementById("bookingForm").reset();
+    });
+</script>
+
+</body>
+</html>

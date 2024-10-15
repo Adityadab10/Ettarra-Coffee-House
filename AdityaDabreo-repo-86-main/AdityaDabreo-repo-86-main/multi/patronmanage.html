@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event - Patron</title>
+    <link rel="stylesheet" href="patronmanage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1><i class="fas fa-calendar-plus"></i> Create Your Event</h1>
+        </header>
+
+        <main>
+            <div class="create-container">
+                <h2><i class="fas fa-pencil-alt"></i> Fill Event Details</h2>
+
+                <!-- Event creation form -->
+                <form id="create-event-form">
+                    <div class="form-group">
+                        <label for="event-name"><i class="fas fa-tag"></i> Event Name:</label>
+                        <input type="text" id="event-name" placeholder="Enter event name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-date"><i class="fas fa-calendar-day"></i> Event Date:</label>
+                        <input type="date" id="event-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-description"><i class="fas fa-align-left"></i> Event Description:</label>
+                        <textarea id="event-description" placeholder="Write a short description" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-location"><i class="fas fa-map-marker-alt"></i> Location:</label>
+                        <input type="text" id="event-location" placeholder="Enter event location" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-capacity"><i class="fas fa-users"></i> Capacity:</label>
+                        <input type="number" id="event-capacity" placeholder="Number of attendees" min="1" required>
+                    </div>
+
+                    <button type="submit" class="create-btn"><i class="fas fa-plus"></i> Create Event</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="patronmanage.js"></script>
+</body>
+</html>

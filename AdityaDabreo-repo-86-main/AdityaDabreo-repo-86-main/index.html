@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ettarra Coffee House Supper Club</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Menu &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="./multi/multi.html">Multi-role Management</a>
+                    <a href="./createevent/createevent.html">Host Your Event</a>
+                    <a href="./about us/workwithus.html">Work With Us</a>
+                    <a href="./review/review.html">Give a review</a>
+                </div>
+            </li>
+            <h1>Ettarra Coffee House</h1>
+            <nav class="navbar">
+                <form class="search-bar" action="#" method="GET">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">Search</button>
+                </form>
+                <ul>
+                    <li><a href="./recommendations/recommendations.html">Get Recommendation</a></li>
+                    <li><a href="./about us/aboutus.html">About us</a></li>
+                    <li><a href="./Tickets/tickets.html">Your Ticket</a></li>
+                    <li><a href="./Login_Signup/login.html">Login / Sign Up</a></li>
+                    
+                </ul>
+
+                <!-- Search Bar -->
+               
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="https://www.vintecclub.com/globalassets/promotions/leave-a-review-for-a-chance-to-win-one-of-three-$1000-dan-murphys-gift-cards/italian-night.jpg" alt="Italian Night">
+                <div class="carousel-text">
+                    <h2>Join Us for Italian Night!</h2>
+                    <button class="carousel-book-btn"><a href="../Booking/booking.html">Book Now</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://cms-b-assets.familysearch.org/dims4/default/18668f9/2147483647/strip/true/crop/750x500+0+0/resize/1240x827!/quality/90/?url=https%3A%2F%2Ffamilysearch-brightspot.s3.amazonaws.com%2F4f%2F6d%2F2cde0692c4bb63b80e22eb5c20f6%2Ffrench-meal-from-above.jpg" alt="French Cuisine">
+                <div class="carousel-text">
+                    <h2>Experience French Cuisine!</h2>
+                    <button class="carousel-book-btn"><a href="../Booking/booking.html">Book Now</a></button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.lobsters-online.com/mm5/graphics/00000001/1/sushi-night-1.jpg" alt="Sushi & Sake Night">
+                <div class="carousel-text">
+                    <h2>Indulge in Sushi & Sake!</h2>
+                    <button class="carousel-book-btn"><a href="../Booking/booking.html">Book Now</a></button>
+                </div>
+            </div>
+            <button class="carousel-button left" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-button right" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+
+    <div class="mid-section">
+        <br>
+        <br>
+        <h2>Ettara Coffee House</h2>
+        "Ettarra Coffee House presents exclusive Supper Club events set in unique themed rooms, offering a one-of-a-kind dining experience. To enhance your journey with us, we’ve implemented a seamless booking and event management system that streamlines reservations, organizes event details, and ensures smooth customer interactions. Join us for an unforgettable evening at Ettarra’s Supper Club!"
+
+
+    </div>
+
+    <div class="divider">
+        <hr>
+    </div>
+    <h2>Upcoming events</h2>
+    <section class="event-cards">
+        <div class="event-card">
+            <img src="https://www.vintecclub.com/globalassets/promotions/leave-a-review-for-a-chance-to-win-one-of-three-$1000-dan-murphys-gift-cards/italian-night.jpg" alt="Italian Night">
+            <div class="event-text">
+                <h2>Italian Night - 5 Course Dinner</h2>
+                <button><a href="../Booking/booking.html"> Book Now</a></button>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://cms-b-assets.familysearch.org/dims4/default/18668f9/2147483647/strip/true/crop/750x500+0+0/resize/1240x827!/quality/90/?url=https%3A%2F%2Ffamilysearch-brightspot.s3.amazonaws.com%2F4f%2F6d%2F2cde0692c4bb63b80e22eb5c20f6%2Ffrench-meal-from-above.jpg" alt="French Cuisine">
+            <div class="event-text">
+                <h2>French Cuisine Evening</h2>
+                <button><a href="../Booking/booking.html"> Book Now</a></button>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://www.lobsters-online.com/mm5/graphics/00000001/1/sushi-night-1.jpg" alt="Sushi Night">
+            <div class="event-text">
+                <h2>Sushi & Sake Night</h2>
+                <button><a href="../Booking/booking.html"> Book Now</a></button>
+            </div>
+        </div>
+    </section>
+    <div class="mid-section">
+        <br>
+        <br>
+        <h2>About Ettarra Coffee House</h2>
+        <ul>
+        <li> Eclectic Café Experience – More than just a coffee shop, we offer a blend of creativity, community, and culinary delight.</li>
+        <li>Unique Themed Rooms – Each of our spaces is carefully designed to transport you into a different world, perfect for every occasion.</li>
+        <li>Exclusive Supper Clubs – Join our intimate and immersive dining events for a one-of-a-kind culinary adventure.</li>
+        <li>Artisanal Coffee & Cuisine** – We’re passionate about serving high-quality coffee and expertly crafted dishes.</li>
+        <li>Unforgettable Ambiance** – Whether for a quiet coffee or a lively supper club, Ettarra offers an inspiring escape with impeccable service.</li>
+    </ul>
+    </div>
+
+    <div class="divider">
+        <hr>
+    </div>
+<div>
+    <h2>Happpines card for you</h2>
+</div>
+    <section class="event-cards">
+        <div class="event-card">
+            <img src="https://www.vintecclub.com/globalassets/promotions/leave-a-review-for-a-chance-to-win-one-of-three-$1000-dan-murphys-gift-cards/italian-night.jpg" alt="Italian Night">
+            <div style="background-color: rgba(255, 255, 255, 0.466); padding: 10px;
+            border-radius: 3px; align-self: center;" class="event-text">
+                <h2>Happiness Card 
+                    <br>rs 1000
+                </h2>
+                <button><a href="./payment/payment.html">Buy Now</a></button>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://cms-b-assets.familysearch.org/dims4/default/18668f9/2147483647/strip/true/crop/750x500+0+0/resize/1240x827!/quality/90/?url=https%3A%2F%2Ffamilysearch-brightspot.s3.amazonaws.com%2F4f%2F6d%2F2cde0692c4bb63b80e22eb5c20f6%2Ffrench-meal-from-above.jpg" alt="French Cuisine">
+            <div style="background-color: rgba(255, 255, 255, 0.466); padding: 10px;
+            border-radius: 3px; align-self: center;" class="event-text">
+                <h2>Happiness Card 
+                    <br>rs 2500
+                </h2>
+                <button><a href="./payment/payment.html">Buy Now</a></button>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="https://www.lobsters-online.com/mm5/graphics/00000001/1/sushi-night-1.jpg" alt="Sushi Night">
+            <div style="background-color: rgba(255, 255, 255, 0.466); padding: 10px;
+            border-radius: 3px; align-self: center;" class="event-text">
+                <h2 background color="white">Happiness Card 
+                    <br>rs 5000
+                </h2>
+                <button><a href="./payment/payment.html">Buy Now</a></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ettarra Coffee House. All Rights Reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="//code.tidio.co/fncj3lwzyxfjqtg1q1nxmgrz2mw8gsvp.js" async></script>
+</body>
+</html>

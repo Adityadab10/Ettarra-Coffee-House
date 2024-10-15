@@ -1,0 +1,147 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.booking-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#booking-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Booking Card Style */
+.booking-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.booking-card h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #007bff;
+}
+
+.booking-details {
+    margin-top: 15px;
+}
+
+.booking-details p {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.approved {
+    background-color: #28a745;
+    color: white;
+}
+
+.rejected {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button.approve {
+    background-color: #28a745;
+    color: white;
+}
+
+button.approve:hover {
+    background-color: #218838;
+}
+
+button.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.reject:hover {
+    background-color: #c82333;
+}
+
+button i {
+    font-size: 1.1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #booking-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

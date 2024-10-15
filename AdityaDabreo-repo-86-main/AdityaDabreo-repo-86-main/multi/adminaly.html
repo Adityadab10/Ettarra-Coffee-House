@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics Dashboard</title>
+    <link rel="stylesheet" href="adminaly.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Admin Analytics Dashboard</h1>
+        </header>
+        <main>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>Total Events</h3>
+                    <p id="total-events">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Attendees</h3>
+                    <p id="total-attendees">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Most Popular Event</h3>
+                    <p id="popular-event">Loading...</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Attendees per Event</h3>
+                <canvas id="attendeesChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="adminaly.js"></script>
+</body>
+</html>

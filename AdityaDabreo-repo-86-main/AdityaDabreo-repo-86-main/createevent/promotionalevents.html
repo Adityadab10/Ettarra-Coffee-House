@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            position: relative;
+            max-width: 100%;
+            height: 70vh; /* 70% height */
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+            position: relative;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .carousel-button.left {
+            left: 10px;
+        }
+        .carousel-button.right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plans</h1>
+    <div class="hero">
+        <div class="carousel" id="carousel"><a href="./chef.html">
+            <div class="carousel-item active">
+                <img src="https://www.shutterstock.com/image-photo/luxury-elegant-wedding-reception-table-600w-1311478262.jpg" alt="Italian Night" />
+                <div class="carousel-text">
+                    <h3>Elegant Wedding Package</h3>
+                    <p>Price: ₹250000 </p>
+                    <ul>
+                        <li>Floral archways</li>
+                        <li>Ceiling drapery with lights</li>
+                        <li>Luxury table centerpieces</li>
+                    </ul>
+                </div>
+            </a>
+            </div>
+            <div class="carousel-item"><a href="./chef.html">
+                <img src="https://d1jhy9q0556ci9.cloudfront.net/wp-content/uploads/2018/11/riverwind-meet-corporate-events-main-1200x675.jpg" alt="French Cuisine Evening" />
+                <div class="carousel-text">
+                    <h3>Corporate Event Package</h3>
+                    <p>Price: ₹100000</p>
+                    <ul>
+                        <li>Branded backdrop</li>
+                        <li>LED lighting setup</li>
+                        <li>Modern lounge areas</li>
+                    </ul>
+                    
+                </div>
+                </a>
+            </div>
+            <div class="carousel-item"><a href="./chef.html">
+                <img src="https://cheetah.cherishx.com/uploads/1654522839_large.jpg" alt="Sushi & Sake Night" />
+                <div class="carousel-text">
+                    <h3>Birthday Party Package</h3>
+                    <p>Price: ₹20000</p>
+                    <ul>
+                        <li>Balloon garlands</li>
+                        <li>Themed table settings</li>
+                        <li>Decorated cake table</li>
+                    </ul>
+                </div>
+                </a>
+            </div>
+        </div>
+        <button class="carousel-button left" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        function showSlide(index) {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+        // Auto-slide every 3 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 3000);
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
